@@ -15,7 +15,6 @@ class CoursesPage extends React.Component{
     return <div key={index}>{course.title}</div>;
   }
   redirectToAddCoursePage(){
-    debugger;
     browserHistory.push('/course');
   }
   render(){
@@ -34,13 +33,13 @@ class CoursesPage extends React.Component{
   }
 }
 
-CoursesPage.PropTypes = {
+CoursesPage.propTypes = {
   courses:PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  course:PropTypes.object
 };
 
 function mapStateToProps(state, ownProps){
-  debugger;
   //we expect that when the course data changes, this mapStateToProps function would receive that new state
   //and end up passing that state as this.props.courses to our component
   return {

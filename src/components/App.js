@@ -5,9 +5,8 @@ import {connect} from 'react-redux';
 
 class App extends React.Component {
   render(){//chileren will be passed in through react router
-console.log("this.props.loading",this.props.loading);
     return (
-      <div className = 'container-fluid'>
+      <div className = "container-fluid">
         <Header
           loading={this.props.loading}
         />
@@ -18,7 +17,7 @@ console.log("this.props.loading",this.props.loading);
 }
 
 App.propTypes = {
-  children: PropTypes.object.inRequired,
+  children: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired
 };
 

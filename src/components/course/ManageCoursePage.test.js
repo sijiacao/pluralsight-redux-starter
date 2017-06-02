@@ -9,7 +9,7 @@ describe ('Manage Course Page', () => {
       authors:[],
       actions:{ saveCourse:() => { return Promise.resolve();}},
       course : {id:'', watchHref:'', title:'', authorId:'', length:'', category:''}
-    }
+    };
   //  const wrapper = mount(<Propvider store={store}><ManageCoursePage/></Provider>);//use mount to create a full DOM in memory
   const wrapper = mount(<ManageCoursePage {...props}/>);
   const saveButton = wrapper.find('input').last();

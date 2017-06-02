@@ -47,7 +47,6 @@ export class ManageCoursePage extends React.Component {
   }
 
   saveCourse(event){
-    console.log("event", event);
     event.preventDefault();
 
     if(!this.courseFormIsValid()){
@@ -55,7 +54,6 @@ export class ManageCoursePage extends React.Component {
     }
 
     this.setState({saving: true});
-    debugger;
     this.props.actions.saveCourse(this.state.course)
     .then(() => this.redirect())
     .catch(error => {
@@ -66,7 +64,6 @@ export class ManageCoursePage extends React.Component {
 
   redirect(){
     this.setState({saving: false});
-    debugger;
     toastr.success('Course Saved');
     this.context.router.push('/courses');
   }
