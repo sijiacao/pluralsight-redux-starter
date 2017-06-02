@@ -11,7 +11,7 @@ export function createCourseSuccess(course){
   return {type: types.CREATE_COURSE_SUCCESS, course};
 }
 export function updateCourseSuccess(course){
-  return {type:types.UPDATE_COURSE_SUCCESS, course}
+  return {type:types.UPDATE_COURSE_SUCCESS, course};
 }
 //we want to handle the promise and then dispatch an action when the promise is resolved
 export function loadCourses(){
